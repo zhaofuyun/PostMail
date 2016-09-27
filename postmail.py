@@ -110,9 +110,9 @@ class MailSender(object):
         mail['Subject'] = subject
         mail['From'] = self.build_sender_str(sender)
 
-        mail['To'] = ", ".join(receiver)
-        mail['Cc'] = ", ".join(cc)
-        mail['Bcc'] = ", ".join(bcc)
+        mail['To'] = "; ".join(receiver)
+        mail['Cc'] = "; ".join(cc)
+        mail['Bcc'] = "; ".join(bcc)
 
         return mail.as_string()
 
